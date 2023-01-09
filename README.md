@@ -13,7 +13,9 @@ df.info <br>
 print("label 개수 : ",len(df['label'].value_counts())) <br>
 #### label 개수 : 22 <br>
 
+
 df['label'].value_counts() <br>
+
 ![image](https://user-images.githubusercontent.com/111934213/211227812-3cc4283a-0911-45db-836b-374e0e43bbf8.png) <br>
 
 
