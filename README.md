@@ -149,6 +149,21 @@ for x in features: <br>
 ![image](https://user-images.githubusercontent.com/111934213/211252428-02723dc9-6a93-4932-ae4e-4a5805beb670.png)
 ![image](https://user-images.githubusercontent.com/111934213/211252435-9c87e118-3cfd-4403-be41-9d91cfc9767b.png)
 
+## ※ pca 분석
+
+from sklearn.decomposition import PCA <br>
+from sklearn.preprocessing import StandardScaler <br>
+x=df[df.columns[:-1]] <br>
+y=df <br>
+scaler = StandardScaler() <br>
+df_standardized = x.copy() <br>
+df_standardized <br>
+for col in df_standardized.columns: <br>
+
+    df_standardized[col] = scaler.fit_transform(df_standardized[col].values.reshape(-1, 1))
+
+df_standardized.head(10)   <br>
+
+![image](https://user-images.githubusercontent.com/111934213/211252700-8d272c88-9ede-47a2-a10d-71258e0d120e.png) <br>
 
 
-    
