@@ -28,4 +28,7 @@ df['label'].value_counts() <br>
 
 
 - columns : 8개 [N, P,	K,	temperature,	humidity,	ph,	rainfall,	label] <br>
-- 2200개 데이터 , label 별 100개씩 있음 
+- 총 2200개 데이터 ,22개의 label ,  label 별 100개씩 있음 , null 데이터는 x <br>
+
+
+
