@@ -4,7 +4,7 @@
 농작물 데이터 분석 및 예측 (개인 프로젝트 공부) 
 https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
 
-## 목표 
+##  ※ 목표 
 - 1. 데이터 분석
 - 2. 머신러닝을 통한 분류
 - 3. 딥러닝을 통한 분류
@@ -131,7 +131,7 @@ sns.jointplot(x= 'K',y = 'P', data = df[df['temperature'] >= 30], hue='label') <
 
 - 강우량이 120mm 이상일 때, 사과가 k,p 둘다 높음
 
-## ※boxplot을 이용한 데이터 분석 
+## ※ boxplot을 이용한 데이터 분석 
            
 features = {'N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall'} <br>
 
