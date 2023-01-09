@@ -4,5 +4,5 @@ https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
 <hr>
 
 df=pd.read_csv("crop.csv")<br>
-df
+df<br>
 ![image](https://user-images.githubusercontent.com/111934213/211227427-92c045d4-2113-47d6-b116-cb0df56bbf63.png)
