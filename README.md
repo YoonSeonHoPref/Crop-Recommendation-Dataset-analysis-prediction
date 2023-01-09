@@ -1,14 +1,15 @@
 # Crop-Recommendation-Dataset-analysis-prediction
 
+
+농작물 데이터 분석 및 예측 (개인 프로젝트) <br>
+https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
+<hr>
+
 import pandas as pd <br>
 import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 import seaborn as sns<br>
 
-
-농작물 데이터 분석 및 예측 (개인 프로젝트) <br>
-https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
-<hr>
 
 df=pd.read_csv("crop.csv")<br>
 df<br>
