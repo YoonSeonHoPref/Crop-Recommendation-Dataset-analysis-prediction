@@ -166,4 +166,23 @@ df_standardized.head(10)   <br>
 
 ![image](https://user-images.githubusercontent.com/111934213/211252700-8d272c88-9ede-47a2-a10d-71258e0d120e.png) <br>
 
+pca = PCA(n_components=3) <br>
+df_pcs = pca.fit_transform(df_standardized.values) <br>
+df_pca = pd.DataFrame(data = df_pcs, columns = ["pca_1", "pca_2", "pca_3"]) <br>
+
+df_pca = pd.concat([df_pca, y], axis = 1) <br>
+df_pca <br>
+
+import plotly.express as px <br>
+df_avg_pca_proximity = df_pca.groupby('label')[['pc_1', 'pc_2', 'pc_3']].mean() <br>
+
+fig = px.scatter_3d(df_avg_pca_proximity, x='pc_1', y='pc_2', z='pc_3',
+                    color = df_avg_pca_proximity.index,
+                    text = df_avg_pca_proximity.index, 
+                    title = "Which Crops Need Similar Conditions?",
+                    template = 'none') <br>
+fig.update_layout(showlegend=False) <br>
+fig.show() <br>
+
+![image](https://user-images.githubusercontent.com/111934213/211252968-3eaa83c3-ca4b-4d51-a3bc-8d9be3397d52.png) <br>
 
