@@ -5,9 +5,9 @@
 https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
 
 ##  ※ 목표 
-- 1. 데이터 분석
-- 2. 머신러닝을 통한 분류
-- 3. 딥러닝을 통한 분류
+1. 데이터 분석
+2. 머신러닝을 통한 분류
+3. 딥러닝을 통한 분류
 
 
 ## ※ 파일 로드 및 탐색 
