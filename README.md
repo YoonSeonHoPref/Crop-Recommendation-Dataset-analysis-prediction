@@ -88,22 +88,31 @@ plt.show()<br>
 - P와 K의 상관관계가 가장 높음
 
 ## ※ jointplot 을 이용한 데이터 분석
+
 sns.jointplot(x= 'rainfall',y = 'ph', data = df, hue='label') <br>
 ![image](https://user-images.githubusercontent.com/111934213/211250798-a7bc7a4e-31e4-437d-997f-c3adf7d0527a.png)
+#### 범위를 줄여서 분석 (강우량 >= 150mm, 온도 >= 30 )
 
 sns.jointplot(x= 'rainfall',y = 'humidity', data = df[df['rainfall'] >= 150], hue='label')<br>
 ![image](https://user-images.githubusercontent.com/111934213/211250819-6a420423-52b6-4bd9-af8c-e0f025e81bd0.png)
 
+- 강우량 150mm 이상의 범위에서 쌀의 습도는 80% 임<br>
+- 쌀 제외 작물의 강우량은 150~200mm <br>
+- 
 sns.jointplot(x= 'rainfall',y = 'ph', data = df[df['rainfall'] >= 150], hue='label')<br>
 ![image](https://user-images.githubusercontent.com/111934213/211250842-c0bcdba8-1d50-48cd-ba89-9cbd97acf706.png)
+- 쌀의 강우량 분포는 굉장히 넓음<br>
+
 
 sns.jointplot(x= 'rainfall',y = 'humidity', data = df[df['temperature'] >= 30], hue='label')<br>
 ![image](https://user-images.githubusercontent.com/111934213/211250858-1d40dbe4-d3c1-4656-8c93-c7b482313917.png)
+- 열대과일의 습도는 80% 이상 분포<br>
+- pigeonpeas의 습도, 강우량 분포는 넓음<br>
 
 sns.jointplot(x= 'rainfall',y = 'ph', data = df[df['temperature'] >= 30], hue='label')<br>
 ![image](https://user-images.githubusercontent.com/111934213/211250889-15956119-6728-4265-9206-2225a98efe6f.png)
 
-
+- 열대과일의 ph는 보통 4 ~ 10 사이에 분포<br>
 
 
 
