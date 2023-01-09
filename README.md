@@ -198,4 +198,31 @@ fig.show() <br>
 ![image](https://user-images.githubusercontent.com/111934213/211252968-3eaa83c3-ca4b-4d51-a3bc-8d9be3397d52.png) <br>
 
 
+## ※ 머신러닝을 이용한 분류 
+
+학습할 모델 : 'Naive Bayes', 'Logistic Regression', 'KNN', 'SVC', 'Decision Tree', 'Random Forest','XGB' <br>
+ 
+데이터 전처리 <br>
+
+X=df[['N','P','K','temperature','humidity','ph','rainfall']] <br>
+c = df['label'].astype('category') <br>
+targets = dict(enumerate(c.cat.categories)) <br>
+df['target'] = c.cat.codes <br>
+y = df['target'] <br>
+
+from sklearn.model_selection import train_test_split <br>
+from sklearn.preprocessing import MinMaxScaler <br>
+X_train, X_test, y_train, y_test = train_test_split(X, y,test_size = 0.2,random_state=48) <br>
+scaler = MinMaxScaler() <br>
+X_train_scaled = scaler.fit_transform(X_train) <br>
+x_test_scaled = scaler.transform(X_test) <br>
+
+from sklearn.neighbors import KNeighborsClassifier <br>
+from sklearn.svm import SVC <br>
+from sklearn.tree import DecisionTreeClassifier <br>
+from sklearn.ensemble import GradientBoostingClassifier <br>
+from sklearn.naive_bayes import GaussianNB <br>
+from sklearn.linear_model import LogisticRegression <br>
+from sklearn.neighbors import KNeighborsClassifier <br>
+from sklearn import metrics <br>
 
