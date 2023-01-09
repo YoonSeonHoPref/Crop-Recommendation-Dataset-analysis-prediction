@@ -4,6 +4,11 @@
 농작물 데이터 분석 및 예측 (개인 프로젝트 공부) 
 https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
 
+## 목표 
+- 1. 데이터 분석
+- 2. 머신러닝을 통한 분류
+- 3. 딥러닝을 통한 분류
+
 
 ## ※ 파일 로드 및 탐색 
 
