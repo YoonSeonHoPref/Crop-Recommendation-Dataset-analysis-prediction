@@ -126,3 +126,29 @@ sns.jointplot(x= 'K',y = 'P', data = df[df['temperature'] >= 30], hue='label') <
 
 ## ※boxplot을 이용한 데이터 분석 
            
+features = {'N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall'} <br>
+
+def crop_boxplot(X): <br>
+
+    ax = sns.set_style('whitegrid')
+    plt.subplots(figsize=(15,8))
+    sns.boxplot(x=X,y='label',data=df)
+    plt.title("Crops Relation with " + str(X),fontsize=24)
+    plt.xlabel("values of " + str(X),fontsize=18)
+    plt.ylabel("Crops Name", fontsize=18)           
+           
+for x in features: <br>
+
+    crop_boxplot(x)
+    
+![image](https://user-images.githubusercontent.com/111934213/211252383-5601b459-7b7a-4e10-bbba-c73adfd31ad1.png)
+![image](https://user-images.githubusercontent.com/111934213/211252395-d917b793-7d29-4461-9ecb-5499c84cb091.png)
+![image](https://user-images.githubusercontent.com/111934213/211252405-95061600-ceff-477f-9f1d-64ab05e8c9f8.png)
+![image](https://user-images.githubusercontent.com/111934213/211252413-5689b084-e315-4ed2-ab4b-4a582e2a7514.png)
+![image](https://user-images.githubusercontent.com/111934213/211252422-d71eb123-582e-405a-a076-a10481f10831.png)
+![image](https://user-images.githubusercontent.com/111934213/211252428-02723dc9-6a93-4932-ae4e-4a5805beb670.png)
+![image](https://user-images.githubusercontent.com/111934213/211252435-9c87e118-3cfd-4403-be41-9d91cfc9767b.png)
+
+
+
+    
