@@ -173,6 +173,10 @@ df_pca = pd.DataFrame(data = df_pcs, columns = ["pca_1", "pca_2", "pca_3"]) <br>
 df_pca = pd.concat([df_pca, y], axis = 1) <br>
 df_pca <br>
 
+- 3개의 주성분으로 변환
+- pca 변환 
+
+
 import plotly.express as px <br>
 df_avg_pca_proximity = df_pca.groupby('label')[['pc_1', 'pc_2', 'pc_3']].mean() <br>
 
@@ -185,4 +189,6 @@ fig.update_layout(showlegend=False) <br>
 fig.show() <br>
 
 ![image](https://user-images.githubusercontent.com/111934213/211252968-3eaa83c3-ca4b-4d51-a3bc-8d9be3397d52.png) <br>
+
+
 
