@@ -114,11 +114,15 @@ sns.jointplot(x= 'rainfall',y = 'ph', data = df[df['temperature'] >= 30], hue='l
 
 - 열대과일의 ph는 보통 4 ~ 10 사이에 분포<br>
 
+sns.jointplot(x= 'K',y = 'P', data = df[df['temperature'] >= 30], hue='label') <br>
+![image](https://user-images.githubusercontent.com/111934213/211251887-9b0ed190-e1e1-436f-bb03-10771a38de29.png)
 
+- 온도가 30도 이상일 때, 포도가 k,p 둘다 높음
 
+sns.jointplot(x= 'K',y = 'P', data = df[df['temperature'] >= 30], hue='label') <br>
+![image](https://user-images.githubusercontent.com/111934213/211251907-224f935b-6bbe-4aca-ab34-3e8445db39a4.png)
 
-
-
+- 강우량이 120mm 이상일 때, 사과가 k,p 둘다 높음
 
 ## ※boxplot을 이용한 데이터 분석 
            
