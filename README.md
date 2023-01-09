@@ -1,4 +1,11 @@
 # Crop-Recommendation-Dataset-analysis-prediction
+
+import pandas as pd <br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+import seaborn as sns<br>
+
+
 농작물 데이터 분석 및 예측 (개인 프로젝트) <br>
 https://www.kaggle.com/datasets/siddharthss/crop-recommendation-dataset
 <hr>
@@ -20,4 +27,4 @@ df['label'].value_counts() <br>
 
 
 - columns : 8개 [N, P,	K,	temperature,	humidity,	ph,	rainfall,	label] <br>
-- 2200개 데이터 , label 별 100개 
+- 2200개 데이터 , label 별 100개씩 있음 
