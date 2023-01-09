@@ -10,7 +10,7 @@ import numpy as np<br>
 import matplotlib.pyplot as plt<br>
 import seaborn as sns<br>
 
-
+## 파일 로드 및 탐색 
 df=pd.read_csv("crop.csv")<br>
 df<br>
 ![image](https://user-images.githubusercontent.com/111934213/211227584-2135af44-d0fc-45d3-8209-35421df1a43d.png)<br>
@@ -32,3 +32,4 @@ df['label'].value_counts() <br>
 
 
 
+## 상관관계 
