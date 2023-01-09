@@ -85,5 +85,31 @@ sns.heatmap(cor,
 plt.show()<br>
 ![image](https://user-images.githubusercontent.com/111934213/211250367-00f84e08-17c6-445f-bf50-19bc37cd46c6.png) <br>
 
-- 
+- P와 K의 상관관계가 가장 높음
+
+## ※ jointplot 을 이용한 데이터 분석
+sns.jointplot(x= 'rainfall',y = 'ph', data = df, hue='label') <br>
+![image](https://user-images.githubusercontent.com/111934213/211250798-a7bc7a4e-31e4-437d-997f-c3adf7d0527a.png)
+
+sns.jointplot(x= 'rainfall',y = 'humidity', data = df[df['rainfall'] >= 150], hue='label')<br>
+![image](https://user-images.githubusercontent.com/111934213/211250819-6a420423-52b6-4bd9-af8c-e0f025e81bd0.png)
+
+sns.jointplot(x= 'rainfall',y = 'ph', data = df[df['rainfall'] >= 150], hue='label')<br>
+![image](https://user-images.githubusercontent.com/111934213/211250842-c0bcdba8-1d50-48cd-ba89-9cbd97acf706.png)
+
+sns.jointplot(x= 'rainfall',y = 'humidity', data = df[df['temperature'] >= 30], hue='label')<br>
+![image](https://user-images.githubusercontent.com/111934213/211250858-1d40dbe4-d3c1-4656-8c93-c7b482313917.png)
+
+sns.jointplot(x= 'rainfall',y = 'ph', data = df[df['temperature'] >= 30], hue='label')<br>
+![image](https://user-images.githubusercontent.com/111934213/211250889-15956119-6728-4265-9206-2225a98efe6f.png)
+
+
+
+
+
+
+
+
+
+## ※boxplot을 이용한 데이터 분석 
            
