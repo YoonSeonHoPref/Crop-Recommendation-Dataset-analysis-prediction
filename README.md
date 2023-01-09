@@ -9,3 +9,9 @@ df<br>
 
 df.info <br>
 ![image](https://user-images.githubusercontent.com/111934213/211227595-ceac37a7-645b-4ea5-a735-d6581c5bfdbf.png)<br>
+
+print("label 개수 : ",len(df['label'].value_counts())) <br>
+### label 개수 : 22 <br>
+
+columns -> 7개 [N, P,	K,	temperature,	humidity,	ph,	rainfall,	label] <br>
+2200개 데이터 , label 별 100개 
