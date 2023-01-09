@@ -226,3 +226,50 @@ from sklearn.linear_model import LogisticRegression <br>
 from sklearn.neighbors import KNeighborsClassifier <br>
 from sklearn import metrics <br>
 
+knn_accuracies = [] <br>
+
+for k in range(1, 20): <br>
+    knn = KNeighborsClassifier(n_neighbors=k) 
+    y_pred = knn.fit(X_train, y_train).predict(X_test)
+    knn_accuracies.append(metrics.accuracy_score(y_test, y_pred))
+k_best = knn_accuracies.index(max(knn_accuracies)) + 1 <br>
+knn = KNeighborsClassifier(n_neighbors = k_best) <br>
+y_pred = knn.fit(X_train, y_train).predict(X_test) <br>
+knn_accuracy = metrics.accuracy_score(y_test, y_pred)<br>
+
+gnb = GaussianNB() <br>
+y_pred = gnb.fit(X_train, y_train).predict(X_test) <br>
+ 
+naive_bayes_accuracy = metrics.accuracy_score(y_test,y_pred) <br>
+
+log_reg = LogisticRegression() <br>
+y_pred = log_reg.fit(X_train, y_train).predict(X_test) <br>
+
+logistic_regression_accuracy = metrics.accuracy_score(y_test, y_pred) <br>
+
+svc = SVC(kernel='linear') <br>
+y_pred = svc.fit(X_train, y_train).predict(X_test)<br>
+
+svc_accuracy = metrics.accuracy_score(y_test, y_pred)<br>
+
+decision_tree = DecisionTreeClassifier()<br>
+y_pred = decision_tree.fit(X_train, y_train).predict(X_test)<br>
+
+tree_accuracy = metrics.accuracy_score(y_test, y_pred)<br>
+
+rfc = RandomForestClassifier(n_estimators = 100)<br>
+y_pred = rfc.fit(X_train, y_train).predict(X_test)<br>
+
+rfc_accuracy = metrics.accuracy_score(y_test, y_pred)<br>
+
+xgb=XGBClassifier()<br>
+y_pred=xgb.fit(X_train, y_train).predict(X_test)<br>
+xgb_accuracy = metrics.accuracy_score(y_test, y_pred)<br>
+
+classification_performance = {'Classification Procedure': ['Naive Bayes', 'Logistic Regression', 'KNN', 'SVC', 'Decision Tree', 'Random Forest','XGB'],
+                              'Accuracy': [naive_bayes_accuracy, logistic_regression_accuracy, knn_accuracy, svc_accuracy, tree_accuracy, rfc_accuracy,xgb_accuracy]}<br>
+
+classification_performance = pd.DataFrame.from_dict(classification_performance)<br>
+classification_performance<br>
+
+![image](https://user-images.githubusercontent.com/111934213/211342989-2ce53f12-e3c8-4576-9315-21c1afad1f69.png)
